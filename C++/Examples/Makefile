@@ -1,4 +1,4 @@
-MODULES = AccelGyroMag ADC AHRS Barometer GPS LED2 Servo RCInput
+MODULES = AccelGyroMag ADC AHRS Barometer GPS LED2 Servo RCInput AccelCalibration
 
 all:
 	for dir in $(MODULES); do \
