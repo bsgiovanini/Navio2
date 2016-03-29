@@ -16,6 +16,8 @@ Sensors names: mpu is MPU9250, lsm is LSM9DS1.
 For print help:
 ./AccelGyroMag -h
 */
+#define G_SI          9.80665
+
 
 #include "Navio/MPU9250.h"
 #include "Navio/LSM9DS1.h"
@@ -109,7 +111,7 @@ int main(int argc, char *argv[])
            
            sensor->update();
            sensor->read_accelerometer(&ax, &ay, &az);
-           fprintf(f, "%+7.3f;%+7.3f;%+7.3f\n", ax, ay, az);
+           fprintf(f, "%+7.3f;%+7.3f;%+7.3f\n", ax/G_SI, ay/G_SI, az/G_SI);
 
            usleep(1000);
         } 
