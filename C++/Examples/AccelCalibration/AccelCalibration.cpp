@@ -102,8 +102,8 @@ int main(int argc, char *argv[])
 
     while (pos < positions) {
 
-        char fileName[12];
-        sprintf(fileName, "dataPos%d_%s.csv", pos, sensor_name);
+        char fileName[50];
+        sprintf(fileName, "dataPos%d_%s_elias.csv", pos, sensor_name);
         FILE *f = fopen(fileName, "w");
         printf("Put on pos %d and press enter", pos);
         char c = getchar();
